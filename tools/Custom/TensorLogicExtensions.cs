@@ -121,8 +121,11 @@ namespace NamespacePrefixPlaceholder.PowerShell.TensorLogic
         /// </summary>
         public static double ComputeSimilarity(EntityEmbedding embedding1, EntityEmbedding embedding2)
         {
-            if (embedding1 == null || embedding2 == null)
-                throw new ArgumentNullException("Embeddings cannot be null");
+            if (embedding1 == null)
+                throw new ArgumentNullException(nameof(embedding1));
+            
+            if (embedding2 == null)
+                throw new ArgumentNullException(nameof(embedding2));
             
             if (embedding1.Features.Length != embedding2.Features.Length)
                 throw new ArgumentException("Embeddings must have the same dimension");

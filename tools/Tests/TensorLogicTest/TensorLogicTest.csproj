@@ -20,7 +20,7 @@
 
   <ItemGroup>
     <Compile Include="../../Custom/TensorLogicExtensions.cs">
-        <Link>../../Custom/TensorLogicExtensions.cs</Link>
+        <Link>TensorLogicExtensions.cs</Link>
     </Compile>
   </ItemGroup>
 
